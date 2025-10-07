@@ -94,6 +94,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (1.1.0)
     erubi (1.13.1)
     execjs (2.10.0)
     ffi (1.17.2-x64-mingw-ucrt)
@@ -251,6 +252,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise (~> 4.9)
+  devise-bootstrap-views (~> 1.0)
   jbuilder (~> 2.7)
   jquery-rails
   pg
