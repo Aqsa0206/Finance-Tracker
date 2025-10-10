@@ -12,7 +12,7 @@
                     <%= link_to 'My Portfolio', my_portfolio_path, class: 'nav-link' %>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <%= link_to 'Friends', friendships_path , class: "nav-link" %>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -22,13 +22,7 @@
                         <%= link_to edit_user_registration_path(current_user), class:"dropdown-item" do %>
                             <%= fa_icon 'edit' %> Edit Profile
                         <% end %>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
                     </li>
                 </ul>
                 <ul class='navbar-nav ml-auto'>
