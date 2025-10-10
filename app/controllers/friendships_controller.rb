@@ -4,6 +4,17 @@ class FriendshipsController < ApplicationController
         @user = current_user
     end
 
+    def create
+        friend = User.find(params[:friend])
+        current_user.friendships.build(friend_id: friend.id)
+        if current_user.save
+            flash[:notice] = "Started following #{friend.full_name}"
+        else
+            flash[:alert] = "Something went wrong"
+        end
+        redirect_to friendships_path
+    end
+
     def destroy
         friend = User.find(params[:id])
         @friend = Friendship.where(user_id: current_user, friend_id: friend).first
