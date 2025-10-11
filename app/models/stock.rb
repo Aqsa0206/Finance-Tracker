@@ -5,14 +5,14 @@ class Stock < ApplicationRecord
   validates :name, :ticker, presence: true
   def self.new_lookup(ticker_symbol)
 
-    # quote = Alphavantage::TimeSeries.new(symbol: ticker_symbol).quote
+    quote = Alphavantage::TimeSeries.new(symbol: ticker_symbol).quote
 
-    # company = Alphavantage::Fundamental.new(symbol: ticker_symbol)
-    # overview = company.overview     
+    company = Alphavantage::Fundamental.new(symbol: ticker_symbol)
+    overview = company.overview     
     #quote != nil
     if true
-    #  new(ticker: ticker_symbol, name: overview.name, last_price: quote.price(ticker_symbol))
-      new(ticker: "MSFT", name: "Microsoft Corporation", last_price: 0.5224e3)
+      new(ticker: ticker_symbol, name: overview.name, last_price: quote.price(ticker_symbol))
+      # new(ticker: "MSFT", name: "Microsoft Corporation", last_price: 0.5224e3)
   
     end
   end

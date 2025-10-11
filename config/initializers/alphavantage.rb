@@ -1,5 +1,5 @@
 require 'alphavantage'
 
 Alphavantage.configure do |config|
-  config.api_key = 'X6WM5I20W2L1AUT2'
+  config.api_key = 'GDO8EZS725LRW9DJ'
 end
